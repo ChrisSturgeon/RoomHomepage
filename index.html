@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">home</a>
+            </li>
+            <li>
+              <a href="/">shop</a>
+            </li>
+            <li>
+              <a href="/">about</a>
+            </li>
+            <li>
+              <a href="/">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="hero">
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="public/images/desktop/desktop-image-hero-1.jpg"
+              height="534"
+              width="840"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="public/images/mobile/mobile-image-hero-1.jpg"
+              width="375"
+              height="360"
+            />
+            <img
+              src="public/images/desktop/desktop-image-hero-1.jpg"
+              height="534"
+              width="840"
+            />
+          </picture>
+          <div>
+            <h1>Discover innovative ways to decorate</h1>
+            <p>
+              We provide unmatched quality, comfort, and style for property
+              owners across the country.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
