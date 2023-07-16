@@ -79,9 +79,54 @@ select {
 
 /* MY CSS */
 
-#wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
+#layout {
+  display: grid;
+  background-color: pink;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr;
+}
+
+#layout header {
+  position: absolute;
+  padding: 3em;
+  display: flex;
+}
+
+#layout header nav ul {
+  display: flex;
+  gap: 1em;
+  list-style-type: none;
+}
+
+#layout header nav div#nav-wrapper {
+  display: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+#layout header nav button {
+  z-index: 99;
+  background-color: green;
+  position: relative;
+}
+
+#layout header nav div#nav-wrapper.hidden {
+  display: none;
+}
+
+#layout header div#nav-wrapper {
+  /* display: none; */
+  background-color: rgba(255, 0, 0, 0.346);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  padding: 3em;
+}
+
+.heroHeader {
+  background-color: rgb(215, 215, 247);
 }
 
 #hero {
@@ -94,7 +139,7 @@ select {
   width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   #hero {
     grid-template-columns: 60% 40%;
   }
