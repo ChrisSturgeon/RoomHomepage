@@ -122,17 +122,42 @@ select {
 }
 
 nav {
+  > div#nav-background {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 150ms ease-in;
+
+    &.active {
+      background-color: rgba(0, 0, 0, 0.771);
+    }
+  }
+
   .slide-content {
+    z-index: 2;
     height: 100vh;
     background-color: red;
     visibility: hidden;
     width: 0;
     top: 0;
-    position: absolute;
+    position: fixed;
     transition: width 200ms ease-in-out;
+
+    > ul {
+      opacity: 0;
+      transition: opacity 3 00ms ease-in-out;
+    }
 
     &.visible {
       visibility: visible;
+
+      > ul {
+        opacity: 100;
+        transition: opacity 400ms ease-in-out;
+      }
     }
 
     &.active {
@@ -149,5 +174,28 @@ nav {
 @media only screen and (min-width: 1024px) {
   #hero {
     grid-template-columns: 60% 40%;
+  }
+
+  nav {
+    #hamburger-btn-open,
+    #hamburger-btn-close {
+      display: none;
+    }
+
+    .slide-content {
+      background-color: transparent;
+      visibility: visible;
+      width: 100vw;
+      height: 50px;
+      transition: none;
+      display: flex;
+      align-items: center;
+
+      > ul {
+        opacity: 100;
+        display: flex;
+        gap: 2em;
+      }
+    }
   }
 }
