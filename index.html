@@ -8,43 +8,41 @@
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <div id="layout">
+    <div id="page-layout">
       <header>
         <nav>
-          <div id="nav-background">
-            <button
-              id="hamburger-btn-open"
-              aria-label="open navigation"
-              aria-expanded="false"
-              aria-list="link-list"
-            >
-              Open
+          <button
+            id="hamburger-btn-open"
+            aria-label="open navigation"
+            aria-expanded="false"
+            aria-list="link-list"
+          >
+            Open
+          </button>
+          <div id="slide-nav" class="slide-content">
+            <button id="hamburger-btn-close" aria-label="close navigation">
+              Close
             </button>
-            <div id="slide-nav" class="slide-content">
-              <button id="hamburger-btn-close" aria-label="close navigation">
-                Close
-              </button>
-              <ul id="link-list">
-                <li>
-                  <a id="home-nav-link" href="#">home</a>
-                </li>
-                <li>
-                  <a id="shop-nav-link" href="#">shop</a>
-                </li>
-                <li>
-                  <a id="about-nav-link" href="#">about</a>
-                </li>
-                <li>
-                  <a id="contact-nav-link" href="#">contact</a>
-                </li>
-              </ul>
-            </div>
+            <ul id="link-list">
+              <li>
+                <a id="home-nav-link" href="#">home</a>
+              </li>
+              <li>
+                <a id="shop-nav-link" href="#">shop</a>
+              </li>
+              <li>
+                <a id="about-nav-link" href="#">about</a>
+              </li>
+              <li>
+                <a id="contact-nav-link" href="#">contact</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </header>
       <main>
-        <div id="hero">
-          <picture>
+        <div class="main-layout">
+          <picture class="featured-image">
             <source
               media="(min-width:768px)"
               srcset="public/images/desktop/desktop-image-hero-1.jpg"
@@ -64,7 +62,8 @@
               width="840"
             />
           </picture>
-          <div class="text-body">
+          <div class="image-controller">hi</div>
+          <div class="featured-text">
             <h1>Discover innovative ways to decorate</h1>
             <p>
               We provide unmatched quality, comfort, and style for property
@@ -72,6 +71,57 @@
             </p>
             <a href="#">Test link</a>
           </div>
+          <picture class="detail-image-1">
+            <source
+              media="(min-width:768px)"
+              srcset="public/images/desktop/desktop-image-hero-2.jpg"
+              height="534"
+              width="840"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="public/images/mobile/mobile-image-hero-2.jpg"
+              width="375"
+              height="360"
+            />
+            <img
+              src="public/images/desktop/desktop-image-hero-2.jpg"
+              alt="Two white chairs next to a wooden table with a bonsai tree"
+              height="534"
+              width="840"
+            />
+          </picture>
+          <div class="about">
+            <h2>ABOUT OUR FURNITURE</h2>
+            <p>
+              Our multifunctional collection blends design and function to suit
+              your individual taste. Make each room unique, or pick a cohesive
+              theme that best express your interests and what inspires you. Find
+              the furniture pieces you need, from traditional to contemporary
+              styles or anything in between. Product specialists are available
+              to help you create your dream space.
+            </p>
+          </div>
+          <picture class="detail-image-2">
+            <source
+              media="(min-width:768px)"
+              srcset="public/images/desktop/desktop-image-hero-3.jpg"
+              height="534"
+              width="840"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="public/images/mobile/mobile-image-hero-3.jpg"
+              width="375"
+              height="360"
+            />
+            <img
+              src="public/images/desktop/desktop-image-hero-3.jpg"
+              alt="Two white chairs next to a wooden table with a bonsai tree"
+              height="534"
+              width="840"
+            />
+          </picture>
         </div>
       </main>
     </div>

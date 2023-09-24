@@ -24,7 +24,7 @@ function trapFocusNextDirection(event) {
 }
 
 function openHamburgerMenu() {
-  navBackground.classList.add('active');
+  // navBackground.classList.add('active');
   slideNav.classList.add('visible');
   slideNav.classList.add('active');
 
@@ -37,7 +37,7 @@ function openHamburgerMenu() {
 }
 
 function closeHamburgerMenu() {
-  navBackground.classList.remove('active');
+  // navBackground.classList.remove('active');
   slideNav.classList.remove('active');
 
   setTimeout(() => {
